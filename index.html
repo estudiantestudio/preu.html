@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preu PAES + IB — Entrada</title>
+  <meta name="description" content="Login y onboarding inteligente para un preuniversitario moderno PAES + IB." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="gate">
+    <section class="gate-card">
+      <header class="gate-header">
+        <div class="gate-logo">⟡</div>
+        <div>
+          <div class="gate-title">Preu PAES + IB</div>
+          <div class="gate-sub">Rápido, limpio, sin saturación. Hecho para estudiar.</div>
+        </div>
+        <div class="gate-actions">
+          <button id="themeBtn" class="btn ghost"><span id="themeIcon">🌙</span> Modo</button>
+        </div>
+      </header>
+
+      <!-- STEP 0: LOGIN -->
+      <section id="step-login" class="step">
+        <h1>Entrar</h1>
+        <p class="muted">
+          Primero iniciamos sesión. Luego te hago <b>solo lo esencial</b> (2–3 min) para personalizar todo.
+        </p>
+
+        <button id="googleBtn" class="btn primary full">
+          <span class="gBadge">G</span>
+          Continuar con Google
+        </button>
+
+        <div class="sep">
+          <span></span><div class="muted small">o</div><span></span>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <label class="label">Correo</label>
+            <input id="email" class="input" type="email" placeholder="tucorreo@gmail.com" autocomplete="email" />
+          </div>
+          <div>
+            <label class="label">Contraseña</label>
+            <input id="password" class="input" type="password" placeholder="Crea una contraseña" autocomplete="current-password" />
+          </div>
+        </div>
+
+        <button id="emailLoginBtn" class="btn ghost full">Crear cuenta / Entrar</button>
+        <button id="forgotBtn" class="linkbtn">¿Olvidaste tu contraseña?</button>
+
+        <div class="notice">
+          <b>Demo:</b> este login es local (no servidor). Para producción se conecta a Auth real.
+        </div>
+      </section>
+
+      <!-- STEP 1..3: ONBOARDING -->
+      <section id="step-onboarding" class="step hidden">
+        <div class="progressTop">
+          <div class="muted small" id="stepLabel">Paso 1 de 3</div>
+          <div class="progressBar"><div id="progressFill" class="progressFill"></div></div>
+        </div>
+
+        <h1 id="onTitle">Cuéntame lo esencial</h1>
+        <p class="muted" id="onSubtitle">No preguntamos todo de una. Esto toma 2–3 min.</p>
+
+        <div id="onForm" class="onForm"></div>
+
+        <div class="rowActions">
+          <button id="backBtn" class="btn ghost">← Atrás</button>
+          <button id="nextBtn" class="btn primary">Siguiente →</button>
+        </div>
+
+        <div class="muted small">
+          Si no sabes algo, elige “No lo sé”. Esto no te juzga, te orienta.
+        </div>
+      </section>
+
+      <!-- STEP DONE -->
+      <section id="step-done" class="step hidden">
+        <h1>Listo ✅</h1>
+        <p class="muted">Tu perfil quedó guardado. La próxima vez entrarás directo.</p>
+
+        <div class="summary" id="summaryBox"></div>
+
+        <div class="rowActions">
+          <button id="editBtn" class="btn ghost">Editar respuestas</button>
+          <button id="enterBtn" class="btn primary">Entrar al Preu</button>
+        </div>
+
+        <div class="notice">
+          Transparencia: no prometemos puntajes mágicos. Te mostramos progreso real y próximos pasos.
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="gate.js"></script>
+</body>
+</html>
