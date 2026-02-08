@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preu PAES + IB — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="gate">
+    <section class="gate-card">
+      <header class="gate-header">
+        <div class="gate-logo">⟡</div>
+        <div>
+          <div class="gate-title">Preu PAES + IB</div>
+          <div class="gate-sub" id="hello">Cargando perfil…</div>
+        </div>
+        <div class="gate-actions">
+          <button id="logout" class="btn ghost">Cerrar sesión</button>
+        </div>
+      </header>
+
+      <section class="step">
+        <h1>Dashboard (demo)</h1>
+        <p class="muted">
+          Aquí conectarías tu preuniversitario completo (estudiar, practicar, progreso, tutor IA).
+        </p>
+
+        <div class="summary" id="profileSummary"></div>
+
+        <div class="rowActions">
+          <button id="editOnboarding" class="btn ghost">Editar onboarding</button>
+          <button id="goHome" class="btn primary">Ir a Inicio del Preu</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="preu.js"></script>
+</body>
+</html>
